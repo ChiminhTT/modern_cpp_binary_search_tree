@@ -26,14 +26,14 @@ namespace BinarySearchTree
         else if (this->value < val) 
         {
           if (this->right_node == nullptr)
-            this->right_node = std::unique_ptr<Node<T>>(new Node(val));
+            this->right_node = std::make_unique<Node<T>>(val);
           else
             this->right_node->insert(val);
         }
         else
         {
           if (this->left_node == nullptr)
-            this->left_node = std::unique_ptr<Node<T>>(new Node(val));
+            this->left_node = std::make_unique<Node<T>>(val);
           else
             this->left_node->insert(val);
         }
